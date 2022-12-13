@@ -1,27 +1,33 @@
 import './App.css';
 
+import { Link, Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/form">Form</Link>
+        <Link to="/form/view">Form View</Link>
+      </nav>
+
+      <main>
+        <Routes>
+          <Route
+           path='/'
+           element={<h1>Home Page</h1>}
+           />
+          <Route
+           path='/form'
+           element={<h1>Home Pag33e</h1>}
+           />
+           <Route
+           path='/form/view'
+          //  element={<FormView data={data}/>}
+           />
+
+        </Routes>
+      </main>
     </div>
   );
 }
